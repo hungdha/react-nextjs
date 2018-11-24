@@ -2,8 +2,11 @@ import React from 'react'
 import {Provider} from 'react-redux'
 import App, {Container} from 'next/app'
 import withRedux from 'next-redux-wrapper'
-import {initStore} from '../store'
-
+import {initStore} from '../store';
+// import jQuery from 'jquery';
+// import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// window.jQuery = window.$ = jQuery;
 class MyApp extends App {
   static async getInitialProps ({Component, ctx}) {
     return {

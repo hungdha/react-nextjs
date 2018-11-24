@@ -1,15 +1,15 @@
 import Header from './Header'
 import Link from 'next/link'
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-}
+
 
 const Layout = (props) => (
-  <div style={layoutStyle}>
+  <div>
     <Header />
-    {props.children}
+    <main role="main">
+        <div className="container">
+          {props.children}
+        </div>
+    </main>
   </div>
 )
 

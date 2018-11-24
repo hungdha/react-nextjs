@@ -6250,7 +6250,7 @@ function (_Error) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/_error.js ***!
   \*******************************/
@@ -6275,5 +6275,5 @@ module.exports = dll_52339ab353c8e0db40da;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=_error.js.map
