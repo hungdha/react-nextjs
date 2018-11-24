@@ -925,21 +925,29 @@
       "static/4e~GoszFVHnkBpwJitTRF/pages/index.js": 15,
       "static/4e~GoszFVHnkBpwJitTRF/pages/post.js": 16,
       "static/4e~GoszFVHnkBpwJitTRF/pages/posts.js": 17,
-      "static/4e~GoszFVHnkBpwJitTRF/pages/profile.js": 18
+      "static/4e~GoszFVHnkBpwJitTRF/pages/profile.js": 18,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/_app.js": 3,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/_error.js": 4,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/about.js": 5,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/contact.js": 6,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/index.js": 7,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/post.js": 8,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/posts.js": 9,
+      "static/DFFnQFT7q8Oj_rcGudbWg/pages/profile.js": 10
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      2
+      10,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ]
   }
 }
