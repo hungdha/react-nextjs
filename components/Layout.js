@@ -1,7 +1,4 @@
 import Header from './Header'
-import Link from 'next/link'
-
-
 const Layout = (props) => (
   <div>
     <Header />

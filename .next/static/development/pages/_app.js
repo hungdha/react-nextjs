@@ -4,17 +4,17 @@
 /*!**********************************!*\
   !*** ./constants/ActionTypes.js ***!
   \**********************************/
-/*! exports provided: FETCH_POSTS_REQUEST, FETCH_POSTS_SUCCESS, FETCH_POSTS_FAILURE */
+/*! exports provided: FETCH_SHOWS_REQUEST, FETCH_SHOWS_SUCCESS, FETCH_SHOWS_FAILURE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_POSTS_REQUEST", function() { return FETCH_POSTS_REQUEST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_POSTS_SUCCESS", function() { return FETCH_POSTS_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_POSTS_FAILURE", function() { return FETCH_POSTS_FAILURE; });
-var FETCH_POSTS_REQUEST = 'FETCH_POSTS_REQUEST';
-var FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS';
-var FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE';
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_SHOWS_REQUEST", function() { return FETCH_SHOWS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_SHOWS_SUCCESS", function() { return FETCH_SHOWS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_SHOWS_FAILURE", function() { return FETCH_SHOWS_FAILURE; });
+var FETCH_SHOWS_REQUEST = 'FETCH_SHOWS_REQUEST';
+var FETCH_SHOWS_SUCCESS = 'FETCH_SHOWS_SUCCESS';
+var FETCH_SHOWS_FAILURE = 'FETCH_SHOWS_FAILURE';
 
 /***/ }),
 
@@ -11995,18 +11995,18 @@ function (_App) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./posts */ "./reducers/posts.js");
+/* harmony import */ var _shows__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shows */ "./reducers/shows.js");
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  posts: _posts__WEBPACK_IMPORTED_MODULE_1__["default"]
+  shows: _shows__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
 
 /***/ }),
 
-/***/ "./reducers/posts.js":
+/***/ "./reducers/shows.js":
 /*!***************************!*\
-  !*** ./reducers/posts.js ***!
+  !*** ./reducers/shows.js ***!
   \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -12014,93 +12014,46 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/ActionTypes */ "./constants/ActionTypes.js");
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-var post = {
-  "id": 139,
-  "url": "http://www.tvmaze.com/shows/139/girls",
-  "name": "Girls",
-  "type": "Scripted",
-  "language": "English",
-  "genres": ["Drama", "Romance"],
-  "status": "Ended",
-  "runtime": 30,
-  "premiered": "2012-04-15",
-  "officialSite": "http://www.hbo.com/girls",
-  "schedule": {
-    "time": "22:00",
-    "days": ["Sunday"]
-  },
-  "rating": {
-    "average": 6.7
-  },
-  "weight": 92,
-  "network": {
-    "id": 8,
-    "name": "HBO",
-    "country": {
-      "name": "United States",
-      "code": "US",
-      "timezone": "America/New_York"
-    }
-  },
-  "webChannel": null,
-  "externals": {
-    "tvrage": 30124,
-    "thetvdb": 220411,
-    "imdb": "tt1723816"
-  },
-  "image": {
-    "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg",
-    "original": "http://static.tvmaze.com/uploads/images/original_untouched/31/78286.jpg"
-  },
-  "summary": "<p>This Emmy winning series is a comic look at the assorted humiliations and rare triumphs of a group of girls in their 20s.</p>",
-  "updated": 1542267272,
-  "_links": {
-    "self": {
-      "href": "http://api.tvmaze.com/shows/139"
-    },
-    "previousepisode": {
-      "href": "http://api.tvmaze.com/episodes/1079686"
-    }
-  }
-};
 var initialState = {
-  posts: {
-    items: null,
-    error: null,
-    loading: false
-  } // REDUCERS
+  items: null,
+  error: null,
+  loading: false,
+  counter: 0 // REDUCERS
 
 };
 
-var posts = function posts() {
+var shows = function shows() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
+  console.log('reducers', action.type);
 
   switch (action.type) {
-    case _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__["FETCH_POSTS_REQUEST"]:
-      return _objectSpread({}, state, {
-        posts: {
-          loading: true
-        }
+    case _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__["FETCH_SHOWS_REQUEST"]:
+      return Object.assign({}, state, {
+        loading: true,
+        counter: 1
       });
 
-    case _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__["FETCH_POSTS_SUCCESS"]:
-      return state;
+    case _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__["FETCH_SHOWS_SUCCESS"]:
+      return Object.assign({}, state, {
+        loading: false,
+        items: action.payload,
+        counter: 2
+      });
 
-    case _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__["FETCH_POSTS_FAILURE"]:
-      return state;
+    case _constants_ActionTypes__WEBPACK_IMPORTED_MODULE_0__["FETCH_SHOWS_FAILURE"]:
+      return Object.assign({}, state, {
+        error: action.payload,
+        loading: false
+      });
 
     default:
       return state;
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (posts);
+/* harmony default export */ __webpack_exports__["default"] = (shows);
 
 /***/ }),
 
@@ -12124,7 +12077,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var initStore = function initStore() {
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"])));
+  var initialState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"])));
 };
 
 /***/ }),

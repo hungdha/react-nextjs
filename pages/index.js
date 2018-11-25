@@ -15,8 +15,8 @@ class Home extends Component {
     render() {
         return (
             <Layout>
-                <h1>My Blog</h1>
-                <ButtonPlus>+1</ButtonPlus>
+                <h1>Welcome to TVMAZE with ReactJS, NextJS</h1>
+                <ButtonPlus>Please click +1</ButtonPlus>
             </Layout>
         );
     }

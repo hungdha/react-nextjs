@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // window.jQuery = window.$ = jQuery;
 class MyApp extends App {
   static async getInitialProps ({Component, ctx}) {
+    // we can dispatch from here too
+    // ctx.store.dispatch({type: 'FOO', payload: 'foo'});
     return {
       pageProps: (Component.getInitialProps ? await Component.getInitialProps(ctx) : {})
     }

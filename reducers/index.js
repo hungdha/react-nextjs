@@ -1,6 +1,6 @@
 
 import { combineReducers } from 'redux';
-import posts from './posts';
+import shows from './shows';
 export default combineReducers({
-    posts
+    shows :shows
 })
